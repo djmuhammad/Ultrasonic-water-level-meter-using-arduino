@@ -8,12 +8,12 @@
 SoftwareSerial rs485(RX_485, TX_485);
 SoftwareSerial gsm(RX_GSM, TX_GSM);
 
-byte readDistance [8] = {0x01, 0x03, 0x00, 0x01, 0x00, 0x01, 0xD5, 0xCA};
+byte readDistance [8] = {0x01, 0x03, 0x00, 0x01, 0x00, 0x01, 0xD5, 0xCA}; // Read distance command 
 byte ultrasonic_data [7];
-byte readLevel [8] = {0x01, 0x03, 0x00, 0x06, 0x00, 0x01, 0x64, 0x0B};
+byte readLevel [8] = {0x01, 0x03, 0x00, 0x06, 0x00, 0x01, 0x64, 0x0B}; // Read liquid level command
 
-String apn = "default";
-String url = "http://m.and-water.uz/bot/app.php";
+String apn = "default"; // gsm network APN
+String url = "http://your.server.com";
 
 uint16_t distance;
 String data;

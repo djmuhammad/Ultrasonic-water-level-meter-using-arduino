@@ -1,7 +1,12 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial rs485(6, 7);
-SoftwareSerial gsm(3, 2);
+#define RX_485 6
+#define TX_485 7
+#define RX_GSM 3
+#define TX_GSM 2
+
+SoftwareSerial rs485(RX_485, TX_485);
+SoftwareSerial gsm(RX_GSM, TX_GSM);
 
 byte readDistance [8] = {0x01, 0x03, 0x00, 0x01, 0x00, 0x01, 0xD5, 0xCA};
 byte ultrasonic_data [7];
